@@ -1,0 +1,30 @@
+color=#f3f4f5
+separator_block_width=15
+markup=none
+
+#[volume-pulseaudio]
+#command=/usr/lib/i3blocks/volume-pulseaudio/volume-pulseaudio
+#interval=1
+#signal=10
+#LONG_FORMAT="${SYMB}${VOL}%"
+#SHORT_FORMAT="${SYMB}${VOL}%"
+#DEFAULT_COLOR="#f3f4f5"
+#USE_ALSA_NAME=1
+
+[cpu]
+command=echo -n '  '; /usr/lib/i3blocks/cpu_usage/cpu_usage
+interval=10
+
+[ram]
+command=echo -n '  '; /usr/lib/i3blocks/memory/memory | grep -E -o '^[0-9]+.[0-9]G'
+interval=30
+
+[iface]
+command=/usr/lib/i3blocks/iface/iface
+instance=eth0
+interval=10
+separator=false
+
+[rofi-calendar]
+command=~/.local/bin/rofi-calendar
+interval=5

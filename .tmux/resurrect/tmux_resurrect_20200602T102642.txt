@@ -1,0 +1,11 @@
+pane	wsl	1	:dev	0	:-	1	:/home/sudipto	1	zsh	:
+pane	wsl	2	:sys	0	:#	1	:/home/sudipto	1	htop	:htop
+pane	wsl	3	:conf	0	:	1	:/home/sudipto	1	zsh	:
+pane	wsl	4	:irc	1	:*	1	:/home/sudipto	1	weechat	:weechat
+pane	wsl	5	:www	0	:	1	:/home/sudipto	1	lynx	:lynx
+window	wsl	1	0	:-	ccfd,166x38,0,0,0
+window	wsl	2	0	:#	ccfe,166x38,0,0,1
+window	wsl	3	0	:	ccff,166x38,0,0,2
+window	wsl	4	1	:*	cd00,166x38,0,0,3
+window	wsl	5	0	:	cd01,166x38,0,0,4
+state	wsl	

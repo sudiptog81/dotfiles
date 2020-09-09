@@ -170,8 +170,8 @@ bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -q -D pulse sset Mas
 bindsym XF86AudioMute           exec --no-startup-id amixer -q -D pulse sset Master toggle
 
 # bind CAPSLOCK and NUMLOCK to i3blocks
-bindsym --release Caps_Lock     exec pkill -SIGRTMIN+11 i3blocks
-bindsym --release Num_Lock      exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Caps_Lock     exec --no-startup-id pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock      exec --no-startup-id pkill -SIGRTMIN+11 i3blocks
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

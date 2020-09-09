@@ -44,8 +44,3 @@ fi
 if [ -x "$(command -v keychain)" ]; then
     eval "$(keychain --eval --quiet id_rsa_github id_rsa_gitlab)"
 fi
-
-# Base16 Shell.
-if [ -f ~/.local/bin/base16-oxide ]; then
-    source ~/.local/bin/base16-oxide
-fi

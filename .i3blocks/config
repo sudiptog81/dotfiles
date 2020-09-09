@@ -1,6 +1,23 @@
-color=#f3f4f5
+color=#f4f4f4
 separator_block_width=15
 markup=none
+
+[capsindicator]
+command=/usr/lib/i3blocks/keyindicator/keyindicator
+KEY=CAPS
+interval=once
+markup=pango
+signal=11
+separator=false
+HIDE_WHEN_OFF=1
+
+#[numindicator]
+#command=/usr/lib/i3blocks/keyindicator/keyindicator
+#KEY=NUM
+#markup=pango
+#interval=once
+#signal=12
+#HIDE_WHEN_OFF=1
 
 #[volume-pulseaudio]
 #command=/usr/lib/i3blocks/volume-pulseaudio/volume-pulseaudio
@@ -12,19 +29,21 @@ markup=none
 #USE_ALSA_NAME=1
 
 [cpu]
-command=echo -n '  '; /usr/lib/i3blocks/cpu_usage/cpu_usage
+command=echo -n ' '; /usr/lib/i3blocks/cpu_usage/cpu_usage
 interval=10
 
 [ram]
-command=echo -n '  '; /usr/lib/i3blocks/memory/memory | grep -E -o '^[0-9]+.[0-9]G'
+command=echo -n ' '; /usr/lib/i3blocks/memory/memory | grep -E -o '^[0-9]+.[0-9]G'
 interval=30
 
 [iface]
-command=/usr/lib/i3blocks/iface/iface
+command=echo -n ' '; /usr/lib/i3blocks/iface/iface
 instance=eth0
 interval=10
-separator=false
 
 [rofi-calendar]
 command=~/.local/bin/rofi-calendar
 interval=5
+
+
+

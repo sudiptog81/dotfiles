@@ -66,7 +66,7 @@ set wildignore+=.DS_Store
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set wildignore+=*/bower_components/*,*/node_modules/*
 set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
-set wildmenu " Hitting TAB in command mode will show possible completions above command line
+set wildmenu " Hitting TAB in command mode will show possible completions above commaed line
 set wildmode=list:longest " Complete only until point of ambiguity
 set winminheight=0 " Allow splits to be reduced to a single line
 set wrapscan " Searches wrap around end of file
@@ -81,8 +81,12 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
+Plug 'preservim/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
+Plug 'jiangmiao/auto-pairs'
+Plug 'chr4/nginx.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-syntastic/syntastic'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " Colors, Fonts, and Syntax.
@@ -99,7 +103,7 @@ set directory=~/.local/share/nvim/swap
 set undodir=~/.local/share/nvim/undo
 
 " Airline.
-let g:airline_theme='minimalist'
+let g:airline_theme='ayu_mirage'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
@@ -112,17 +116,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
-" Syntastic.
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_phpcs_disable = 1
-let g:syntastic_phpmd_disable = 1
-let g:syntastic_php_checkers = ['php']
-let g:syntastic_quiet_messages = { "type": "style" }
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_auto_jump = 2
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Keybindings
+map <Leader>y "*y
+map <Leader>p "*p
+map <C-d> :NERDTreeToggle<cr>
+nnoremap <Leader><space> :noh<cr>
+

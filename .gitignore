@@ -1,0 +1,5 @@
+id_rsa
+.gnupg/private*
+.gnupg/*.gpg
+.gnupg/*.kbx*
+*.key

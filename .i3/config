@@ -169,6 +169,10 @@ bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -q -D pulse sset Mas
 bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
 bindsym XF86AudioMute           exec --no-startup-id amixer -q -D pulse sset Master toggle
 
+# bind CAPSLOCK and NUMLOCK to i3blocks
+bindsym --release Caps_Lock     exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock      exec pkill -SIGRTMIN+11 i3blocks
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -237,7 +241,7 @@ bar {
     strip_workspace_numbers yes
 
     colors {
-        background  #212121
+        background  #222222
         statusline  #dddddd
         separator   #666666
         # class             border  backgr. text

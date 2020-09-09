@@ -7,7 +7,7 @@ dotfiles_repo_dir=$(pwd)
 backup_dir="$HOME/.dotfiles.orig"
 dotfiles_home_dir=(.zsh .aliases .bash_profile .bashrc wallpaper.png .zshenv .dircolors .editorconfig .exports .gnupg .tmux
                    .functions .gemrc .ripgreprc .tmux.conf .tmux.conf.local .wgetrc .Xresources .zshrc)
-dotfiles_xdg_config_dir=(.alacritty .dunst .htop .i3 .i3blocks .picom .rofi .nvim)
+dotfiles_xdg_config_dir=(.ranger .alacritty .dunst .htop .i3 .i3blocks .picom .rofi .nvim)
 
 # Print usage message.
 usage() {
